@@ -230,6 +230,8 @@ header {
   background-color: var(--background-button-color);
 }
 
+/*Modal*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -238,7 +240,7 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -261,13 +263,133 @@ header {
   background-color: var(--white);
 }
 
-.modal-icon {
+.icon-exid {
   position: absolute;
   top: 0;
   right: 0;
   margin-right: 8px;
   margin-top: 8px;
   cursor: pointer;
+}
+
+.icon-exid:hover,
+.icon-exid:focus {
+  fill: var(--acent-color);
+}
+
+.form {
+  width: 528px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.modal-h {
+  display: block;
+
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  position: relative;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover, 
+.form-input:focus {
+  border: 1px solid var(--acent-color);
+  outline: none;
+}
+
+.form-input:focus + svg {
+  fill: var(--acent-color);
+}
+
+.form-field .modal-icon {
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover .modal-icon, 
+.form-field:focus .modal-icon{
+  fill: var(--acent-color);
+}
+
+.form-field::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-icon {
+  position: absolute;
+  transform: translateY(31px) translateX(12px);
+}
+
+.modal-text {
+  font-size: 12px;
+  line-height: 1,16;
+  letter-spacing: 0.01em;
+}
+
+textarea {
+  resize: none;
+
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea:hover, 
+textarea:focus {
+  border: 1px solid var(--acent-color);
+  outline: none;
+}
+
+.modal-button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 52px;
+  background-color: var(--acent-color);
+  color: var(--white);
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+}
+
+.modal-link {
+  color: var(--acent-color);
+}
+
+.check-icon {
   
 }
 
@@ -577,9 +699,12 @@ header {
 
 .footer-case {
   margin-left: 70px;
+  margin-right: 93px;
 }
 
 .footer-title {
+  display: block;
+  margin-bottom: 20px;
   color: var(--white);
   font-weight: 700;
   font-size: 14px;
@@ -591,7 +716,6 @@ header {
 
 .main-footer-list {
   display: flex;
-  margin-top: 20px;
 }
 
 .footer-icon-list {
@@ -622,7 +746,45 @@ header {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--acent-color);
-  
+}
+
+.footer-form {
+  height: 50px;
+  width: 358px;
+  padding-left: 16px;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--secondary-background-color);
+  color: var(--white);
+}
+
+.footer-button {
+  width: 200px;
+  height: 50px;
+  padding: 0;
+  background-color: var(--acent-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.button-footer-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+
+.icon-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 28px;
+  padding-left: 28px;
 }
 
 /* PORTFOLIO */
